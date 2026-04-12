@@ -25,8 +25,6 @@ llm = OllamaLLM(model="llama3.2")
 def process(state: AgentState) -> AgentState:
     response = llm.invoke(state["messages"])
     print(f"\nAI: {response}")
-    # Append AI response to conversation history
-    state["messages"].append(HumanMessage(content=response))
     return state
 
 
@@ -38,17 +36,7 @@ graph.add_edge("process", END)
 
 agent = graph.compile()
 
-conversation_history = []
-
 user_input = input("Enter: ")
 while user_input != "exit":
-    # Add user message to conversation history
-    conversation_history.append(HumanMessage(content=user_input))
-    
-    # Invoke agent with full conversation history
-    result = agent.invoke({"messages": conversation_history})
-    
-    # Update conversation history with AI response
-    conversation_history = result["messages"]
-    
+    result = agent.invoke({"messages": [HumanMessage(content=user_input)]})
     user_input = input("Enter: ")
