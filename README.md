@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # LangGraph crash course
 
 Hands-on notebooks for learning [LangGraph](https://langchain-ai.github.io/langgraph/)—building stateful graphs and simple agents step by step.
@@ -62,4 +61,3 @@ Hands-on notebooks for learning [LangGraph](https://langchain-ai.github.io/langg
 ## Resources
 
 - [LangGraph documentation](https://langchain-ai.github.io/langgraph/)
->>>>>>> cce30145ba30f4f0e2c3d772212bf071bbbde572
