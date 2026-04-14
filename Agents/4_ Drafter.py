@@ -15,6 +15,10 @@ from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 # This is a global variable to store the document content

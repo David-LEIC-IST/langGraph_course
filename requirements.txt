@@ -3,8 +3,12 @@ langchain
 ipython
 langchain_ollama
 langchain_community
-dotenv
+python-dotenv
 typing
 chromadb
 langchain_chroma
 langchain_core
+langchain_openai
+langchain_text_splitters
+langchain_groq
+langchain_huggingface
